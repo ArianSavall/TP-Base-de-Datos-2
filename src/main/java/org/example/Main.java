@@ -125,6 +125,6 @@ public class Main {
                 suc3
         );
 
-        System.out.println(venta5.convertirAJson());
+        venta5.convertirAJson();
     }
 }
