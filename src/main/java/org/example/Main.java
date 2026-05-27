@@ -4,6 +4,7 @@ import org.example.models.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Arrays;
 
 public class Main {
@@ -21,6 +22,11 @@ public class Main {
         Domicilio dom8 = new Domicilio("Sarmiento", 999, "Lanús", "Buenos Aires");
         Domicilio dom9 = new Domicilio("Las Heras", 1020, "Palermo", "CABA");
         Domicilio dom10 = new Domicilio("Lavalle", 777, "Centro", "CABA");
+        Domicilio dom11 = new Domicilio("Sandoval", 876, "Almirante Brown", "GBA");
+        Domicilio dom12 = new Domicilio("Lahille", 1562, "Almirante Beown", "GBA");
+        Domicilio dom13 = new Domicilio("Av. De Mayo", 123, "Centro", "CABA");
+        Domicilio dom14 = new Domicilio("Carabobo", 567, "Centro", "CABA");
+        Domicilio dom15 = new Domicilio("Unamuno", 888, "Lomas De Zamora", "GBA");
 
         // ==========================================
         // 2. CLIENTES (5) - Usan domicilios del 1 al 5
@@ -30,6 +36,11 @@ public class Main {
         Cliente cli3 = new Cliente("Carlos", "Lopez", dom3, 32333444);
         Cliente cli4 = new Cliente("Ana", "Martinez", dom4, 33444555);
         Cliente cli5 = new Cliente("Lucia", "Fernandez", dom5, 34555666);
+        Cliente cli6 = new Cliente("Arian", "Savall", dom6, 44891763);
+        Cliente cli7 = new Cliente("Ariel", "Gonzalez", dom7, 42845133);
+        Cliente cli8 = new Cliente("Humberto", "Gomez", dom8, 23576123);
+        Cliente cli9 = new Cliente("Roberto", "Fernandez", dom9, 18971576);
+        Cliente cli10 = new Cliente("Pedro", "Diez", dom10, 39087654);
 
         // ==========================================
         // 3. LABORATORIOS (2)
@@ -55,11 +66,11 @@ public class Main {
         // ==========================================
         // 5. EMPLEADOS (5) - Usan domicilios del 6 al 10
         // ==========================================
-        Empleado emp1 = new Empleado("Roberto", "Sanchez", 25111222, 20251112228L, dom6);
-        Empleado emp2 = new Empleado("Elena", "Diaz", 26222333, 27262223339L, dom7);
-        Empleado emp3 = new Empleado("Mario", "Ruiz", 27333444, 20273334441L, dom8);
-        Empleado emp4 = new Empleado("Sofía", "Castro", 28444555, 27284445552L, dom9);
-        Empleado emp5 = new Empleado("Diego", "Alvarez", 29555666, 20295556663L, dom10);
+        Empleado emp1 = new Empleado("Roberto", "Sanchez", 25111222, 20251112228L, dom11);
+        Empleado emp2 = new Empleado("Elena", "Diaz", 26222333, 27262223339L, dom12);
+        Empleado emp3 = new Empleado("Mario", "Ruiz", 27333444, 20273334441L, dom13);
+        Empleado emp4 = new Empleado("Sofía", "Castro", 28444555, 27284445552L, dom14);
+        Empleado emp5 = new Empleado("Diego", "Alvarez", 29555666, 20295556663L, dom15);
 
         // ==========================================
         // 6. SUCURSALES (3)
@@ -125,6 +136,50 @@ public class Main {
                 suc3
         );
 
-        venta5.convertirAJson();
+        List<Cliente> listaClientes = new ArrayList<>();
+
+        listaClientes.add(cli1);
+        listaClientes.add(cli2);
+        listaClientes.add(cli3);
+        listaClientes.add(cli4);
+        listaClientes.add(cli5);
+        listaClientes.add(cli6);
+        listaClientes.add(cli7);
+        listaClientes.add(cli8);
+        listaClientes.add(cli9);
+        listaClientes.add(cli10);
+
+        List<Producto> listaProductos = new ArrayList<>();
+
+        listaProductos.add(prod1);
+        listaProductos.add(prod2);
+        listaProductos.add(prod3);
+        listaProductos.add(prod4);
+        listaProductos.add(prod5);
+        listaProductos.add(prod6);
+        listaProductos.add(prod7);
+        listaProductos.add(prod8);
+        listaProductos.add(prod9);
+        listaProductos.add(prod10);
+
+        List<Sucursal> listaSucursal = new ArrayList<>();
+
+        listaSucursal.add(suc1);
+        listaSucursal.add(suc2);
+        listaSucursal.add(suc3);
+
+        List<Venta> listaVentas = new ArrayList<>();
+
+        listaVentas.add(venta1);
+        listaVentas.add(venta2);
+        listaVentas.add(venta3);
+        listaVentas.add(venta4);
+        listaVentas.add(venta5);
+
+        JsonSerializer serializer = new JsonSerializer();
+
+        serializer.convertirListaAJson(listaVentas);
+
+
     }
 }

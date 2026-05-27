@@ -9,8 +9,10 @@ import java.time.LocalDate;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
-public abstract class JsonSerializer {
+public class JsonSerializer {
     public void convertirAJson(){
         Gson gson = new GsonBuilder().registerTypeAdapter(LocalDate.class, new LocalDateAdapter()).setPrettyPrinting().create();
 
@@ -26,5 +28,21 @@ public abstract class JsonSerializer {
             System.out.println("Ocurrió un error al guardar el archivo: " + e.getMessage());
             e.printStackTrace();
         }
+    }
+
+    public void convertirListaAJson(List<?> lista){
+        Gson gson = new GsonBuilder().registerTypeAdapter(LocalDate.class, new LocalDateAdapter()).setPrettyPrinting().create();
+
+        Path rutaArchivo = Paths.get("src/main/java/org/example/Json/Venta.json");
+
+        try {
+            Files.writeString(rutaArchivo, gson.toJson(lista));
+
+            System.out.println("Archivo JSON de la lista creado con exito");
+        }catch (IOException e){
+            System.out.println("Ocurrio un error al guardar el archivo: " + e.getMessage());
+            e.printStackTrace();
+        }
+
     }
 }

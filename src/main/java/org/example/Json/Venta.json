@@ -1,0 +1,547 @@
+[
+  {
+    "nroTicket": "0001-7444",
+    "fecha": "2026-05-26",
+    "metodoPago": "EFECTIVO",
+    "productos": [
+      {
+        "codigo": 101,
+        "tipo": "MEDICINA",
+        "descripcion": "Aspirina 500mg",
+        "precio": 500.5,
+        "laboratorio": {
+          "_id": 0,
+          "nombre": "Bayer"
+        }
+      },
+      {
+        "codigo": 105,
+        "tipo": "MEDICINA",
+        "descripcion": "Paracetamol 1g",
+        "precio": 650.25,
+        "laboratorio": {
+          "_id": 0,
+          "nombre": "Bayer"
+        }
+      }
+    ],
+    "comprador": {
+      "nombre": "Juan",
+      "apellido": "Perez",
+      "domicilio": {
+        "_id": 0,
+        "calle": "Av. Cabildo",
+        "numero": 1500,
+        "localidad": "Belgrano",
+        "provincia": "CABA"
+      },
+      "dni": 30111222
+    },
+    "sucursal": {
+      "nroPuntoVenta": [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "empleados": [
+        {
+          "nombre": "Sofía",
+          "apellido": "Castro",
+          "dni": 28444555,
+          "cuil": 27284445552,
+          "domicilio": {
+            "_id": 0,
+            "calle": "Carabobo",
+            "numero": 567,
+            "localidad": "Centro",
+            "provincia": "CABA"
+          }
+        }
+      ],
+      "encargado": {
+        "nombre": "Roberto",
+        "apellido": "Sanchez",
+        "dni": 25111222,
+        "cuil": 20251112228,
+        "domicilio": {
+          "_id": 0,
+          "calle": "Sandoval",
+          "numero": 876,
+          "localidad": "Almirante Brown",
+          "provincia": "GBA"
+        }
+      }
+    },
+    "empleadoAtendio": {
+      "nombre": "Sofía",
+      "apellido": "Castro",
+      "dni": 28444555,
+      "cuil": 27284445552,
+      "domicilio": {
+        "_id": 0,
+        "calle": "Carabobo",
+        "numero": 567,
+        "localidad": "Centro",
+        "provincia": "CABA"
+      }
+    },
+    "empleadoCobro": {
+      "nombre": "Sofía",
+      "apellido": "Castro",
+      "dni": 28444555,
+      "cuil": 27284445552,
+      "domicilio": {
+        "_id": 0,
+        "calle": "Carabobo",
+        "numero": 567,
+        "localidad": "Centro",
+        "provincia": "CABA"
+      }
+    }
+  },
+  {
+    "nroTicket": "0001-7836",
+    "fecha": "2026-05-25",
+    "metodoPago": "TARJETA",
+    "productos": [
+      {
+        "codigo": 103,
+        "tipo": "PERFUMERIA",
+        "descripcion": "Shampoo Anticaspa",
+        "precio": 1200.75,
+        "laboratorio": {
+          "_id": 0,
+          "nombre": "Roemmers"
+        }
+      },
+      {
+        "codigo": 106,
+        "tipo": "PERFUMERIA",
+        "descripcion": "Desodorante en aerosol",
+        "precio": 950.0,
+        "laboratorio": {
+          "_id": 0,
+          "nombre": "Roemmers"
+        }
+      },
+      {
+        "codigo": 109,
+        "tipo": "PERFUMERIA",
+        "descripcion": "Crema Hidratante",
+        "precio": 3200.0,
+        "laboratorio": {
+          "_id": 0,
+          "nombre": "Bayer"
+        }
+      }
+    ],
+    "comprador": {
+      "nombre": "Maria",
+      "apellido": "Gomez",
+      "domicilio": {
+        "_id": 0,
+        "calle": "San Martin",
+        "numero": 320,
+        "localidad": "Quilmes",
+        "provincia": "Buenos Aires"
+      },
+      "dni": 31222333
+    },
+    "sucursal": {
+      "nroPuntoVenta": [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "empleados": [
+        {
+          "nombre": "Sofía",
+          "apellido": "Castro",
+          "dni": 28444555,
+          "cuil": 27284445552,
+          "domicilio": {
+            "_id": 0,
+            "calle": "Carabobo",
+            "numero": 567,
+            "localidad": "Centro",
+            "provincia": "CABA"
+          }
+        }
+      ],
+      "encargado": {
+        "nombre": "Roberto",
+        "apellido": "Sanchez",
+        "dni": 25111222,
+        "cuil": 20251112228,
+        "domicilio": {
+          "_id": 0,
+          "calle": "Sandoval",
+          "numero": 876,
+          "localidad": "Almirante Brown",
+          "provincia": "GBA"
+        }
+      }
+    },
+    "empleadoAtendio": {
+      "nombre": "Sofía",
+      "apellido": "Castro",
+      "dni": 28444555,
+      "cuil": 27284445552,
+      "domicilio": {
+        "_id": 0,
+        "calle": "Carabobo",
+        "numero": 567,
+        "localidad": "Centro",
+        "provincia": "CABA"
+      }
+    },
+    "empleadoCobro": {
+      "nombre": "Sofía",
+      "apellido": "Castro",
+      "dni": 28444555,
+      "cuil": 27284445552,
+      "domicilio": {
+        "_id": 0,
+        "calle": "Carabobo",
+        "numero": 567,
+        "localidad": "Centro",
+        "provincia": "CABA"
+      }
+    }
+  },
+  {
+    "nroTicket": "0002-232",
+    "fecha": "2026-05-24",
+    "metodoPago": "DEBITO",
+    "productos": [
+      {
+        "codigo": 102,
+        "tipo": "MEDICINA",
+        "descripcion": "Ibuprofeno 400mg",
+        "precio": 800.0,
+        "laboratorio": {
+          "_id": 0,
+          "nombre": "Bayer"
+        }
+      },
+      {
+        "codigo": 104,
+        "tipo": "MEDICINA",
+        "descripcion": "Amoxicilina 500mg",
+        "precio": 1500.0,
+        "laboratorio": {
+          "_id": 0,
+          "nombre": "Roemmers"
+        }
+      }
+    ],
+    "comprador": {
+      "nombre": "Carlos",
+      "apellido": "Lopez",
+      "domicilio": {
+        "_id": 0,
+        "calle": "Rivadavia",
+        "numero": 5500,
+        "localidad": "Caballito",
+        "provincia": "CABA"
+      },
+      "dni": 32333444
+    },
+    "sucursal": {
+      "nroPuntoVenta": [
+        "0",
+        "0",
+        "0",
+        "2"
+      ],
+      "empleados": [
+        {
+          "nombre": "Sofía",
+          "apellido": "Castro",
+          "dni": 28444555,
+          "cuil": 27284445552,
+          "domicilio": {
+            "_id": 0,
+            "calle": "Carabobo",
+            "numero": 567,
+            "localidad": "Centro",
+            "provincia": "CABA"
+          }
+        }
+      ],
+      "encargado": {
+        "nombre": "Elena",
+        "apellido": "Diaz",
+        "dni": 26222333,
+        "cuil": 27262223339,
+        "domicilio": {
+          "_id": 0,
+          "calle": "Lahille",
+          "numero": 1562,
+          "localidad": "Almirante Beown",
+          "provincia": "GBA"
+        }
+      }
+    },
+    "empleadoAtendio": {
+      "nombre": "Sofía",
+      "apellido": "Castro",
+      "dni": 28444555,
+      "cuil": 27284445552,
+      "domicilio": {
+        "_id": 0,
+        "calle": "Carabobo",
+        "numero": 567,
+        "localidad": "Centro",
+        "provincia": "CABA"
+      }
+    },
+    "empleadoCobro": {
+      "nombre": "Sofía",
+      "apellido": "Castro",
+      "dni": 28444555,
+      "cuil": 27284445552,
+      "domicilio": {
+        "_id": 0,
+        "calle": "Carabobo",
+        "numero": 567,
+        "localidad": "Centro",
+        "provincia": "CABA"
+      }
+    }
+  },
+  {
+    "nroTicket": "0003-2164",
+    "fecha": "2026-05-21",
+    "metodoPago": "EFECTIVO",
+    "productos": [
+      {
+        "codigo": 110,
+        "tipo": "MEDICINA",
+        "descripcion": "Loratadina 10mg",
+        "precio": 780.0,
+        "laboratorio": {
+          "_id": 0,
+          "nombre": "Roemmers"
+        }
+      },
+      {
+        "codigo": 103,
+        "tipo": "PERFUMERIA",
+        "descripcion": "Shampoo Anticaspa",
+        "precio": 1200.75,
+        "laboratorio": {
+          "_id": 0,
+          "nombre": "Roemmers"
+        }
+      },
+      {
+        "codigo": 101,
+        "tipo": "MEDICINA",
+        "descripcion": "Aspirina 500mg",
+        "precio": 500.5,
+        "laboratorio": {
+          "_id": 0,
+          "nombre": "Bayer"
+        }
+      }
+    ],
+    "comprador": {
+      "nombre": "Ana",
+      "apellido": "Martinez",
+      "domicilio": {
+        "_id": 0,
+        "calle": "Belgrano",
+        "numero": 123,
+        "localidad": "Moron",
+        "provincia": "Buenos Aires"
+      },
+      "dni": 33444555
+    },
+    "sucursal": {
+      "nroPuntoVenta": [
+        "0",
+        "0",
+        "0",
+        "3"
+      ],
+      "empleados": [
+        {
+          "nombre": "Diego",
+          "apellido": "Alvarez",
+          "dni": 29555666,
+          "cuil": 20295556663,
+          "domicilio": {
+            "_id": 0,
+            "calle": "Unamuno",
+            "numero": 888,
+            "localidad": "Lomas De Zamora",
+            "provincia": "GBA"
+          }
+        }
+      ],
+      "encargado": {
+        "nombre": "Mario",
+        "apellido": "Ruiz",
+        "dni": 27333444,
+        "cuil": 20273334441,
+        "domicilio": {
+          "_id": 0,
+          "calle": "Av. De Mayo",
+          "numero": 123,
+          "localidad": "Centro",
+          "provincia": "CABA"
+        }
+      }
+    },
+    "empleadoAtendio": {
+      "nombre": "Diego",
+      "apellido": "Alvarez",
+      "dni": 29555666,
+      "cuil": 20295556663,
+      "domicilio": {
+        "_id": 0,
+        "calle": "Unamuno",
+        "numero": 888,
+        "localidad": "Lomas De Zamora",
+        "provincia": "GBA"
+      }
+    },
+    "empleadoCobro": {
+      "nombre": "Diego",
+      "apellido": "Alvarez",
+      "dni": 29555666,
+      "cuil": 20295556663,
+      "domicilio": {
+        "_id": 0,
+        "calle": "Unamuno",
+        "numero": 888,
+        "localidad": "Lomas De Zamora",
+        "provincia": "GBA"
+      }
+    }
+  },
+  {
+    "nroTicket": "0003-9116",
+    "fecha": "2026-05-19",
+    "metodoPago": "TARJETA",
+    "productos": [
+      {
+        "codigo": 107,
+        "tipo": "MEDICINA",
+        "descripcion": "Clonazepam 2mg",
+        "precio": 2500.0,
+        "laboratorio": {
+          "_id": 0,
+          "nombre": "Bayer"
+        }
+      },
+      {
+        "codigo": 108,
+        "tipo": "MEDICINA",
+        "descripcion": "Vitamina C",
+        "precio": 1100.5,
+        "laboratorio": {
+          "_id": 0,
+          "nombre": "Roemmers"
+        }
+      },
+      {
+        "codigo": 101,
+        "tipo": "MEDICINA",
+        "descripcion": "Aspirina 500mg",
+        "precio": 500.5,
+        "laboratorio": {
+          "_id": 0,
+          "nombre": "Bayer"
+        }
+      },
+      {
+        "codigo": 102,
+        "tipo": "MEDICINA",
+        "descripcion": "Ibuprofeno 400mg",
+        "precio": 800.0,
+        "laboratorio": {
+          "_id": 0,
+          "nombre": "Bayer"
+        }
+      }
+    ],
+    "comprador": {
+      "nombre": "Lucia",
+      "apellido": "Fernandez",
+      "domicilio": {
+        "_id": 0,
+        "calle": "Corrientes",
+        "numero": 348,
+        "localidad": "Centro",
+        "provincia": "CABA"
+      },
+      "dni": 34555666
+    },
+    "sucursal": {
+      "nroPuntoVenta": [
+        "0",
+        "0",
+        "0",
+        "3"
+      ],
+      "empleados": [
+        {
+          "nombre": "Diego",
+          "apellido": "Alvarez",
+          "dni": 29555666,
+          "cuil": 20295556663,
+          "domicilio": {
+            "_id": 0,
+            "calle": "Unamuno",
+            "numero": 888,
+            "localidad": "Lomas De Zamora",
+            "provincia": "GBA"
+          }
+        }
+      ],
+      "encargado": {
+        "nombre": "Mario",
+        "apellido": "Ruiz",
+        "dni": 27333444,
+        "cuil": 20273334441,
+        "domicilio": {
+          "_id": 0,
+          "calle": "Av. De Mayo",
+          "numero": 123,
+          "localidad": "Centro",
+          "provincia": "CABA"
+        }
+      }
+    },
+    "empleadoAtendio": {
+      "nombre": "Diego",
+      "apellido": "Alvarez",
+      "dni": 29555666,
+      "cuil": 20295556663,
+      "domicilio": {
+        "_id": 0,
+        "calle": "Unamuno",
+        "numero": 888,
+        "localidad": "Lomas De Zamora",
+        "provincia": "GBA"
+      }
+    },
+    "empleadoCobro": {
+      "nombre": "Diego",
+      "apellido": "Alvarez",
+      "dni": 29555666,
+      "cuil": 20295556663,
+      "domicilio": {
+        "_id": 0,
+        "calle": "Unamuno",
+        "numero": 888,
+        "localidad": "Lomas De Zamora",
+        "provincia": "GBA"
+      }
+    }
+  }
+]
