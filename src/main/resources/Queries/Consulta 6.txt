@@ -1,0 +1,53 @@
+[
+  { $unwind: "$productos" },
+  {
+    $facet: {
+      productosMasVendidos: [
+        {
+          $group: {
+            _id: {
+              codigo: "$productos.codigo",
+              tipo: "$productos.tipo",
+              descripcion:
+                "$productos.descripcion",
+              precio: "$productos.precio",
+              laboratorioCodigo:
+                "$productos.laboratorio.codigo",
+              laboratorioNombre:
+                "$productos.laboratorio.nombre"
+            },
+            producto: { $first: "$productos" },
+            cantidadVendida: { $sum: 1 }
+          }
+        },
+        { $sort: { cantidadVendida: -1 } },
+        {
+          $project: {
+            _id: 0,
+            producto: 1,
+            cantidadVendida: 1
+          }
+        }
+      ],
+      sucursalesConMasVentas: [
+        {
+          $group: {
+            _id: "$sucursal.nroPuntoVenta",
+            sucursal: { $first: "$sucursal" },
+            cantidadProductosVendidos: { $sum: 1 }
+          }
+        },
+        {
+          $sort: { cantidadProductosVendidos: -1 }
+        },
+        {
+          $project: {
+            _id: 0,
+            sucursal: 1,
+            cantidadProductosVendidos: 1
+          }
+        }
+      ]
+    }
+  }
+]

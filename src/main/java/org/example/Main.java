@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.models.*;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,13 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         // ==========================================
-        // 1. DOMICILIOS (10)
+        // 0. OBRAS SOCIALES (3)
+        // ==========================================
+            ObraSocial obra1 = new ObraSocial("OSDE"); obra1.setCodigo(0);
+            ObraSocial obra2 = new ObraSocial("IOMA"); obra2.setCodigo(1);
+            ObraSocial obra3 = new ObraSocial("SWISS MEDICAL"); obra3.setCodigo(2);
+        // ==========================================
+        // 1. DOMICILIOS (15)
         // ==========================================
         Domicilio dom1 = new Domicilio("Av. Cabildo", 1500, "Belgrano", "CABA");
         Domicilio dom2 = new Domicilio("San Martin", 320, "Quilmes", "Buenos Aires");
@@ -29,18 +36,18 @@ public class Main {
         Domicilio dom15 = new Domicilio("Unamuno", 888, "Lomas De Zamora", "GBA");
 
         // ==========================================
-        // 2. CLIENTES (5) - Usan domicilios del 1 al 5
+        // 2. CLIENTES (5) - Usan domicilios del 1 al 10
         // ==========================================
-        Cliente cli1 = new Cliente("Juan", "Perez", dom1, 30111222);
-        Cliente cli2 = new Cliente("Maria", "Gomez", dom2, 31222333);
-        Cliente cli3 = new Cliente("Carlos", "Lopez", dom3, 32333444);
-        Cliente cli4 = new Cliente("Ana", "Martinez", dom4, 33444555);
-        Cliente cli5 = new Cliente("Lucia", "Fernandez", dom5, 34555666);
-        Cliente cli6 = new Cliente("Arian", "Savall", dom6, 44891763);
-        Cliente cli7 = new Cliente("Ariel", "Gonzalez", dom7, 42845133);
-        Cliente cli8 = new Cliente("Humberto", "Gomez", dom8, 23576123);
-        Cliente cli9 = new Cliente("Roberto", "Fernandez", dom9, 18971576);
-        Cliente cli10 = new Cliente("Pedro", "Diez", dom10, 39087654);
+        Cliente cli1 = new Cliente("Juan", "Perez", dom1, 30111222, obra1);
+        Cliente cli2 = new Cliente("Maria", "Gomez", dom2, 31222333, obra1);
+        Cliente cli3 = new Cliente("Carlos", "Lopez", dom3, 32333444, obra2);
+        Cliente cli4 = new Cliente("Ana", "Martinez", dom4, 33444555, obra2);
+        Cliente cli5 = new Cliente("Lucia", "Fernandez", dom5, 34555666, obra2);
+        Cliente cli6 = new Cliente("Arian", "Savall", dom6, 44891763, obra3);
+        Cliente cli7 = new Cliente("Ariel", "Gonzalez", dom7, 42845133, obra3);
+        Cliente cli8 = new Cliente("Humberto", "Gomez", dom8, 23576123, obra3);
+        Cliente cli9 = new Cliente("Roberto", "Fernandez", dom9, 18971576, null);
+        Cliente cli10 = new Cliente("Pedro", "Diez", dom10, 39087654, null);
 
         // ==========================================
         // 3. LABORATORIOS (2)
@@ -66,11 +73,11 @@ public class Main {
         // ==========================================
         // 5. EMPLEADOS (5) - Usan domicilios del 6 al 10
         // ==========================================
-        Empleado emp1 = new Empleado("Roberto", "Sanchez", 25111222, 20251112228L, dom11);
-        Empleado emp2 = new Empleado("Elena", "Diaz", 26222333, 27262223339L, dom12);
-        Empleado emp3 = new Empleado("Mario", "Ruiz", 27333444, 20273334441L, dom13);
-        Empleado emp4 = new Empleado("Sofía", "Castro", 28444555, 27284445552L, dom14);
-        Empleado emp5 = new Empleado("Diego", "Alvarez", 29555666, 20295556663L, dom15);
+        Empleado emp1 = new Empleado("Roberto", "Sanchez", 25111222, 20251112228L, dom11, obra1);
+        Empleado emp2 = new Empleado("Elena", "Diaz", 26222333, 27262223339L, dom12, obra2);
+        Empleado emp3 = new Empleado("Mario", "Ruiz", 27333444, 20273334441L, dom13, obra3);
+        Empleado emp4 = new Empleado("Sofía", "Castro", 28444555, 27284445552L, dom14, null);
+        Empleado emp5 = new Empleado("Diego", "Alvarez", 29555666, 20295556663L, dom15, obra1);
 
         // ==========================================
         // 6. SUCURSALES (3)
@@ -82,9 +89,9 @@ public class Main {
         Sucursal suc3 = null;
 
         try{
-            suc1 = new Sucursal(new char[]{'0','0','0','1'}, emp1);
-            suc2 = new Sucursal(new char[]{'0','0','0','2'}, emp2);
-            suc3 = new Sucursal(new char[]{'0','0','0','3'}, emp3);
+            suc1 = new Sucursal("0001", emp1);
+            suc2 = new Sucursal("0002", emp2);
+            suc3 = new Sucursal("0003", emp3);
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -124,7 +131,7 @@ public class Main {
                 LocalDate.now().minusDays(5),
                 METODO_PAGO.EFECTIVO,
                 Arrays.asList(prod10, prod3, prod1),
-                cli4,
+                cli5,
                 suc3
         );
 
@@ -134,6 +141,46 @@ public class Main {
                 Arrays.asList(prod7, prod8, prod1, prod2),
                 cli5,
                 suc3
+        );
+
+        Venta venta6 = new Venta(
+            LocalDate.now().minusDays(3),
+            METODO_PAGO.DEBITO,
+            Arrays.asList(prod6, prod7),
+            cli6,
+            suc1
+        );
+
+        Venta venta7 = new Venta(
+            LocalDate.now().minusDays(4),
+            METODO_PAGO.EFECTIVO,
+            Arrays.asList(prod8, prod10, prod5),
+            cli7,
+            suc2
+        );
+
+        Venta venta8 = new Venta(
+            LocalDate.now().minusDays(6),
+            METODO_PAGO.TARJETA,
+            Arrays.asList(prod2, prod3, prod6),
+            cli9,
+            suc3
+        );
+
+        Venta venta9 = new Venta(
+            LocalDate.now().minusDays(7),
+            METODO_PAGO.DEBITO,
+            Arrays.asList(prod1, prod4, prod9),
+            cli9,
+            suc1
+        );
+
+        Venta venta10 = new Venta(
+            LocalDate.now().minusDays(8),
+            METODO_PAGO.EFECTIVO,
+            Arrays.asList(prod5, prod7, prod10),
+            cli9,
+            suc2
         );
 
         List<Cliente> listaClientes = new ArrayList<>();
@@ -175,11 +222,19 @@ public class Main {
         listaVentas.add(venta3);
         listaVentas.add(venta4);
         listaVentas.add(venta5);
+        listaVentas.add(venta6);
+        listaVentas.add(venta7);
+        listaVentas.add(venta8);
+        listaVentas.add(venta9);
+        listaVentas.add(venta10);
 
         JsonSerializer serializer = new JsonSerializer();
 
-        serializer.convertirListaAJson(listaVentas);
-
+        try{
+            serializer.convertirListaAJson(listaVentas);
+        }catch(IOException e){
+            e.printStackTrace();
+        }
 
     }
 }

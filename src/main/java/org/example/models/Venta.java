@@ -1,5 +1,7 @@
 package org.example.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
@@ -27,6 +29,38 @@ public class Venta extends JsonSerializer{
     }
 
     private void generarNroTicket(){
-        this.nroTicket = this.sucursal.formatNroPuntoVenta() + "-" + (new Random()).nextInt(10000);
+        this.nroTicket = this.sucursal.getNroPuntoVenta() + "-" + (new Random()).nextInt(10000);
+    }
+
+    public String getNroTicket() {
+        return nroTicket;
+    }
+
+    public LocalDate getFecha() {
+        return fecha;
+    }
+
+    public METODO_PAGO getMetodoPago() {
+        return metodoPago;
+    }
+
+    public List<Producto> getProductos() {
+        return productos;
+    }
+
+    public Cliente getComprador() {
+        return comprador;
+    }
+
+    public Sucursal getSucursal() {
+        return sucursal;
+    }
+
+    public Empleado getEmpleadoAtendio() {
+        return empleadoAtendio;
+    }
+
+    public Empleado getEmpleadoCobro() {
+        return empleadoCobro;
     }
 }

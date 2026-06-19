@@ -1,0 +1,108 @@
+{
+  "nroTicket": "0001-4305",
+  "fecha": "2026-06-15",
+  "metodoPago": "DEBITO",
+  "productos": [
+    {
+      "codigo": 106,
+      "tipo": "PERFUMERIA",
+      "descripcion": "Desodorante en aerosol",
+      "precio": 950.0,
+      "laboratorio": {
+        "codigo": 0,
+        "nombre": "Roemmers"
+      }
+    },
+    {
+      "codigo": 107,
+      "tipo": "MEDICINA",
+      "descripcion": "Clonazepam 2mg",
+      "precio": 2500.0,
+      "laboratorio": {
+        "codigo": 0,
+        "nombre": "Bayer"
+      }
+    }
+  ],
+  "comprador": {
+    "nombre": "Arian",
+    "apellido": "Savall",
+    "domicilio": {
+      "_id": 5,
+      "calle": "Santa Fe",
+      "numero": 2100,
+      "localidad": "Recoleta",
+      "provincia": "CABA"
+    },
+    "dni": 44891763,
+    "obraSocial": {
+      "_id": 2,
+      "nombre": "SWISS MEDICAL",
+      "clientesAfiliados": [],
+      "empleadosAfiliados": []
+    }
+  },
+  "sucursal": {
+    "nroPuntoVenta": "0001",
+    "empleados": [
+      {
+        "nombre": "Sofía",
+        "apellido": "Castro",
+        "dni": 28444555,
+        "cuil": 27284445552,
+        "domicilio": {
+          "_id": 13,
+          "calle": "Carabobo",
+          "numero": 567,
+          "localidad": "Centro",
+          "provincia": "CABA"
+        }
+      }
+    ],
+    "encargado": {
+      "nombre": "Roberto",
+      "apellido": "Sanchez",
+      "dni": 25111222,
+      "cuil": 20251112228,
+      "domicilio": {
+        "_id": 10,
+        "calle": "Sandoval",
+        "numero": 876,
+        "localidad": "Almirante Brown",
+        "provincia": "GBA"
+      },
+      "obraSocial": {
+        "_id": 0,
+        "nombre": "OSDE",
+        "clientesAfiliados": [],
+        "empleadosAfiliados": []
+      }
+    }
+  },
+  "empleadoAtendio": {
+    "nombre": "Sofía",
+    "apellido": "Castro",
+    "dni": 28444555,
+    "cuil": 27284445552,
+    "domicilio": {
+      "_id": 13,
+      "calle": "Carabobo",
+      "numero": 567,
+      "localidad": "Centro",
+      "provincia": "CABA"
+    }
+  },
+  "empleadoCobro": {
+    "nombre": "Sofía",
+    "apellido": "Castro",
+    "dni": 28444555,
+    "cuil": 27284445552,
+    "domicilio": {
+      "_id": 13,
+      "calle": "Carabobo",
+      "numero": 567,
+      "localidad": "Centro",
+      "provincia": "CABA"
+    }
+  }
+}

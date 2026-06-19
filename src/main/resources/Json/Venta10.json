@@ -1,0 +1,112 @@
+{
+  "nroTicket": "0002-2751",
+  "fecha": "2026-06-10",
+  "metodoPago": "EFECTIVO",
+  "productos": [
+    {
+      "codigo": 105,
+      "tipo": "MEDICINA",
+      "descripcion": "Paracetamol 1g",
+      "precio": 650.25,
+      "laboratorio": {
+        "codigo": 0,
+        "nombre": "Bayer"
+      }
+    },
+    {
+      "codigo": 107,
+      "tipo": "MEDICINA",
+      "descripcion": "Clonazepam 2mg",
+      "precio": 2500.0,
+      "laboratorio": {
+        "codigo": 0,
+        "nombre": "Bayer"
+      }
+    },
+    {
+      "codigo": 110,
+      "tipo": "MEDICINA",
+      "descripcion": "Loratadina 10mg",
+      "precio": 780.0,
+      "laboratorio": {
+        "codigo": 0,
+        "nombre": "Roemmers"
+      }
+    }
+  ],
+  "comprador": {
+    "nombre": "Roberto",
+    "apellido": "Fernandez",
+    "domicilio": {
+      "_id": 8,
+      "calle": "Las Heras",
+      "numero": 1020,
+      "localidad": "Palermo",
+      "provincia": "CABA"
+    },
+    "dni": 18971576
+  },
+  "sucursal": {
+    "nroPuntoVenta": "0002",
+    "empleados": [
+      {
+        "nombre": "Sofía",
+        "apellido": "Castro",
+        "dni": 28444555,
+        "cuil": 27284445552,
+        "domicilio": {
+          "_id": 13,
+          "calle": "Carabobo",
+          "numero": 567,
+          "localidad": "Centro",
+          "provincia": "CABA"
+        }
+      }
+    ],
+    "encargado": {
+      "nombre": "Elena",
+      "apellido": "Diaz",
+      "dni": 26222333,
+      "cuil": 27262223339,
+      "domicilio": {
+        "_id": 11,
+        "calle": "Lahille",
+        "numero": 1562,
+        "localidad": "Almirante Beown",
+        "provincia": "GBA"
+      },
+      "obraSocial": {
+        "_id": 1,
+        "nombre": "IOMA",
+        "clientesAfiliados": [],
+        "empleadosAfiliados": []
+      }
+    }
+  },
+  "empleadoAtendio": {
+    "nombre": "Sofía",
+    "apellido": "Castro",
+    "dni": 28444555,
+    "cuil": 27284445552,
+    "domicilio": {
+      "_id": 13,
+      "calle": "Carabobo",
+      "numero": 567,
+      "localidad": "Centro",
+      "provincia": "CABA"
+    }
+  },
+  "empleadoCobro": {
+    "nombre": "Sofía",
+    "apellido": "Castro",
+    "dni": 28444555,
+    "cuil": 27284445552,
+    "domicilio": {
+      "_id": 13,
+      "calle": "Carabobo",
+      "numero": 567,
+      "localidad": "Centro",
+      "provincia": "CABA"
+    }
+  }
+}

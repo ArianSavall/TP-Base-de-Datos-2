@@ -1,0 +1,55 @@
+[
+  {
+    $match: {
+      fecha: {
+        $gte: "2026-06-10",
+        $lte: "2026-06-15"
+      }
+    }
+  },
+  {
+    $unwind: "$productos"
+  },
+  {
+    $facet: {
+      totalGeneral: [
+        {
+          $group: {
+            _id: null,
+            dineroGanadoTotal: {
+              $sum: "$productos.precio"
+            }
+          }
+        },
+        {
+          $project: {
+            _id: 0,
+            dineroGanadoTotal: 1
+          }
+        }
+      ],
+      porSucursal: [
+        {
+          $group: {
+            _id: "$sucursal.nroPuntoVenta",
+            dineroGanadoTotal: {
+              $sum: "$productos.precio"
+            }
+          }
+        },
+        {
+          $project: {
+            _id: 0,
+            sucursal: "$_id",
+            dineroGanadoTotal: 1
+          }
+        },
+        {
+          $sort: {
+            sucursal: 1
+          }
+        }
+      ]
+    }
+  }
+]

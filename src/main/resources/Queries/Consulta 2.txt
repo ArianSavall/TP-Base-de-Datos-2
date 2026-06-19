@@ -1,0 +1,34 @@
+[
+  {
+    $addFields: {
+      fechaVenta: {
+        $dateFromString: {
+          dateString: "$fecha",
+          onError: null,
+          onNull: null
+        }
+      }
+    }
+  },
+  {
+    $match: {
+      fechaVenta: {
+        $gte: ISODate("2026-06-10T00:00:00.000Z"),
+        $lte: ISODate("2026-06-15T23:59:59.999Z")
+      }
+    }
+  },
+  {
+    $group: {
+      _id: {
+        $ifNull: [
+          "$comprador.obraSocial.nombre",
+          "privado"
+        ]
+      },
+      cantidadesVentas: {
+        $sum: 1
+      }
+    }
+  }
+]

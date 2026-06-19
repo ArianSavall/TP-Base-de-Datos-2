@@ -1,0 +1,112 @@
+{
+  "nroTicket": "0001-994",
+  "fecha": "2026-06-11",
+  "metodoPago": "DEBITO",
+  "productos": [
+    {
+      "codigo": 101,
+      "tipo": "MEDICINA",
+      "descripcion": "Aspirina 500mg",
+      "precio": 500.5,
+      "laboratorio": {
+        "codigo": 0,
+        "nombre": "Bayer"
+      }
+    },
+    {
+      "codigo": 104,
+      "tipo": "MEDICINA",
+      "descripcion": "Amoxicilina 500mg",
+      "precio": 1500.0,
+      "laboratorio": {
+        "codigo": 0,
+        "nombre": "Roemmers"
+      }
+    },
+    {
+      "codigo": 109,
+      "tipo": "PERFUMERIA",
+      "descripcion": "Crema Hidratante",
+      "precio": 3200.0,
+      "laboratorio": {
+        "codigo": 0,
+        "nombre": "Bayer"
+      }
+    }
+  ],
+  "comprador": {
+    "nombre": "Roberto",
+    "apellido": "Fernandez",
+    "domicilio": {
+      "_id": 8,
+      "calle": "Las Heras",
+      "numero": 1020,
+      "localidad": "Palermo",
+      "provincia": "CABA"
+    },
+    "dni": 18971576
+  },
+  "sucursal": {
+    "nroPuntoVenta": "0001",
+    "empleados": [
+      {
+        "nombre": "Sofía",
+        "apellido": "Castro",
+        "dni": 28444555,
+        "cuil": 27284445552,
+        "domicilio": {
+          "_id": 13,
+          "calle": "Carabobo",
+          "numero": 567,
+          "localidad": "Centro",
+          "provincia": "CABA"
+        }
+      }
+    ],
+    "encargado": {
+      "nombre": "Roberto",
+      "apellido": "Sanchez",
+      "dni": 25111222,
+      "cuil": 20251112228,
+      "domicilio": {
+        "_id": 10,
+        "calle": "Sandoval",
+        "numero": 876,
+        "localidad": "Almirante Brown",
+        "provincia": "GBA"
+      },
+      "obraSocial": {
+        "_id": 0,
+        "nombre": "OSDE",
+        "clientesAfiliados": [],
+        "empleadosAfiliados": []
+      }
+    }
+  },
+  "empleadoAtendio": {
+    "nombre": "Sofía",
+    "apellido": "Castro",
+    "dni": 28444555,
+    "cuil": 27284445552,
+    "domicilio": {
+      "_id": 13,
+      "calle": "Carabobo",
+      "numero": 567,
+      "localidad": "Centro",
+      "provincia": "CABA"
+    }
+  },
+  "empleadoCobro": {
+    "nombre": "Sofía",
+    "apellido": "Castro",
+    "dni": 28444555,
+    "cuil": 27284445552,
+    "domicilio": {
+      "_id": 13,
+      "calle": "Carabobo",
+      "numero": 567,
+      "localidad": "Centro",
+      "provincia": "CABA"
+    }
+  }
+}

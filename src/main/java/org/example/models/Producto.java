@@ -14,4 +14,24 @@ public class Producto extends JsonSerializer{
         this.precio = precio;
         this.laboratorio = laboratorio;
     }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public TIPO getTipo() {
+        return tipo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public float getPrecio() {
+        return precio;
+    }
+
+    public Laboratorio getLaboratorio() {
+        return laboratorio;
+    }
 }

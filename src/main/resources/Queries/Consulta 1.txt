@@ -1,0 +1,34 @@
+[
+  {
+    $match: {
+      fecha: {
+        $gte: "2026-06-10",
+        $lte: "2026-06-15"
+      }
+    }
+  },
+  {
+    $facet: {
+      totalVentas: [
+        {
+          $count: "cantidadTotalVentas"
+        }
+      ],
+      ventasPorSucursal: [
+        {
+          $group: {
+            _id: "$sucursal.nroPuntoVenta",
+            cantidadVentas: {
+              $sum: 1
+            }
+          }
+        },
+        {
+          $sort: {
+            _id: 1
+          }
+        }
+      ]
+    }
+  }
+]

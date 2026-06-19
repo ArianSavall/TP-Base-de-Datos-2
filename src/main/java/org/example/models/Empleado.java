@@ -6,13 +6,16 @@ public class Empleado extends JsonSerializer{
     private int dni;
     private long cuil;
     private Domicilio domicilio;
+    private ObraSocial obraSocial;
 
-    public Empleado(String nombre, String apellido, int dni, long cuil, Domicilio domicilio) {
+
+    public Empleado(String nombre, String apellido, int dni, long cuil, Domicilio domicilio, ObraSocial obraSocial) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
         this.cuil = cuil;
         this.domicilio = domicilio;
+        this.obraSocial = obraSocial;
     }
 
 }

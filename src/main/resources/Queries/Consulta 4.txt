@@ -1,0 +1,10 @@
+[
+  { $unwind: "$productos" },
+  {
+    $group: {
+      _id: "$productos.tipo",
+      cantidadTotalVendida: { $sum: 1 }
+    }
+  },
+  { $sort: { cantidadTotalVendida: -1 } }
+]

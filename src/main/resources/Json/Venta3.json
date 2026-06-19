@@ -1,0 +1,108 @@
+{
+  "nroTicket": "0002-9495",
+  "fecha": "2026-06-16",
+  "metodoPago": "DEBITO",
+  "productos": [
+    {
+      "codigo": 102,
+      "tipo": "MEDICINA",
+      "descripcion": "Ibuprofeno 400mg",
+      "precio": 800.0,
+      "laboratorio": {
+        "codigo": 0,
+        "nombre": "Bayer"
+      }
+    },
+    {
+      "codigo": 104,
+      "tipo": "MEDICINA",
+      "descripcion": "Amoxicilina 500mg",
+      "precio": 1500.0,
+      "laboratorio": {
+        "codigo": 0,
+        "nombre": "Roemmers"
+      }
+    }
+  ],
+  "comprador": {
+    "nombre": "Carlos",
+    "apellido": "Lopez",
+    "domicilio": {
+      "_id": 2,
+      "calle": "Rivadavia",
+      "numero": 5500,
+      "localidad": "Caballito",
+      "provincia": "CABA"
+    },
+    "dni": 32333444,
+    "obraSocial": {
+      "_id": 1,
+      "nombre": "IOMA",
+      "clientesAfiliados": [],
+      "empleadosAfiliados": []
+    }
+  },
+  "sucursal": {
+    "nroPuntoVenta": "0002",
+    "empleados": [
+      {
+        "nombre": "Sofía",
+        "apellido": "Castro",
+        "dni": 28444555,
+        "cuil": 27284445552,
+        "domicilio": {
+          "_id": 13,
+          "calle": "Carabobo",
+          "numero": 567,
+          "localidad": "Centro",
+          "provincia": "CABA"
+        }
+      }
+    ],
+    "encargado": {
+      "nombre": "Elena",
+      "apellido": "Diaz",
+      "dni": 26222333,
+      "cuil": 27262223339,
+      "domicilio": {
+        "_id": 11,
+        "calle": "Lahille",
+        "numero": 1562,
+        "localidad": "Almirante Beown",
+        "provincia": "GBA"
+      },
+      "obraSocial": {
+        "_id": 1,
+        "nombre": "IOMA",
+        "clientesAfiliados": [],
+        "empleadosAfiliados": []
+      }
+    }
+  },
+  "empleadoAtendio": {
+    "nombre": "Sofía",
+    "apellido": "Castro",
+    "dni": 28444555,
+    "cuil": 27284445552,
+    "domicilio": {
+      "_id": 13,
+      "calle": "Carabobo",
+      "numero": 567,
+      "localidad": "Centro",
+      "provincia": "CABA"
+    }
+  },
+  "empleadoCobro": {
+    "nombre": "Sofía",
+    "apellido": "Castro",
+    "dni": 28444555,
+    "cuil": 27284445552,
+    "domicilio": {
+      "_id": 13,
+      "calle": "Carabobo",
+      "numero": 567,
+      "localidad": "Centro",
+      "provincia": "CABA"
+    }
+  }
+}

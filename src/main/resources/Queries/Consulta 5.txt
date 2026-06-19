@@ -1,0 +1,51 @@
+[
+  { $unwind: "$productos" },
+  {
+    $facet: {
+      productos: [
+        {
+          $group: {
+            _id: {
+              codigo: "$productos.codigo",
+              tipo: "$productos.tipo",
+              descripcion:
+                "$productos.descripcion",
+              precio: "$productos.precio",
+              laboratorio:
+                "$productos.laboratorio"
+            },
+            precioAcumulado: {
+              $sum: "$productos.precio"
+            }
+          }
+        },
+        { $sort: { precioAcumulado: -1 } },
+        {
+          $project: {
+            _id: 0,
+            producto: "$_id",
+            precioAcumulado: 1
+          }
+        }
+      ],
+      sucursales: [
+        {
+          $group: {
+            _id: "$sucursal",
+            precioTotalVendidos: {
+              $sum: "$productos.precio"
+            }
+          }
+        },
+        { $sort: { precioTotalVendidos: -1 } },
+        {
+          $project: {
+            _id: 0,
+            sucursal: "$_id",
+            precioTotalVendidos: 1
+          }
+        }
+      ]
+    }
+  }
+]

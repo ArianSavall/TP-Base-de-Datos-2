@@ -1,0 +1,146 @@
+{
+  "nroTicket": "0003-666",
+  "fecha": "2026-06-11",
+  "metodoPago": "TARJETA",
+  "productos": [
+    {
+      "codigo": 107,
+      "tipo": "MEDICINA",
+      "descripcion": "Clonazepam 2mg",
+      "precio": 2500.0,
+      "laboratorio": {
+        "codigo": 0,
+        "nombre": "Bayer"
+      }
+    },
+    {
+      "codigo": 108,
+      "tipo": "MEDICINA",
+      "descripcion": "Vitamina C",
+      "precio": 1100.5,
+      "laboratorio": {
+        "codigo": 0,
+        "nombre": "Roemmers"
+      }
+    },
+    {
+      "codigo": 101,
+      "tipo": "MEDICINA",
+      "descripcion": "Aspirina 500mg",
+      "precio": 500.5,
+      "laboratorio": {
+        "codigo": 0,
+        "nombre": "Bayer"
+      }
+    },
+    {
+      "codigo": 102,
+      "tipo": "MEDICINA",
+      "descripcion": "Ibuprofeno 400mg",
+      "precio": 800.0,
+      "laboratorio": {
+        "codigo": 0,
+        "nombre": "Bayer"
+      }
+    }
+  ],
+  "comprador": {
+    "nombre": "Lucia",
+    "apellido": "Fernandez",
+    "domicilio": {
+      "_id": 4,
+      "calle": "Corrientes",
+      "numero": 348,
+      "localidad": "Centro",
+      "provincia": "CABA"
+    },
+    "dni": 34555666,
+    "obraSocial": {
+      "_id": 1,
+      "nombre": "IOMA",
+      "clientesAfiliados": [],
+      "empleadosAfiliados": []
+    }
+  },
+  "sucursal": {
+    "nroPuntoVenta": "0003",
+    "empleados": [
+      {
+        "nombre": "Diego",
+        "apellido": "Alvarez",
+        "dni": 29555666,
+        "cuil": 20295556663,
+        "domicilio": {
+          "_id": 14,
+          "calle": "Unamuno",
+          "numero": 888,
+          "localidad": "Lomas De Zamora",
+          "provincia": "GBA"
+        },
+        "obraSocial": {
+          "_id": 0,
+          "nombre": "OSDE",
+          "clientesAfiliados": [],
+          "empleadosAfiliados": []
+        }
+      }
+    ],
+    "encargado": {
+      "nombre": "Mario",
+      "apellido": "Ruiz",
+      "dni": 27333444,
+      "cuil": 20273334441,
+      "domicilio": {
+        "_id": 12,
+        "calle": "Av. De Mayo",
+        "numero": 123,
+        "localidad": "Centro",
+        "provincia": "CABA"
+      },
+      "obraSocial": {
+        "_id": 2,
+        "nombre": "SWISS MEDICAL",
+        "clientesAfiliados": [],
+        "empleadosAfiliados": []
+      }
+    }
+  },
+  "empleadoAtendio": {
+    "nombre": "Diego",
+    "apellido": "Alvarez",
+    "dni": 29555666,
+    "cuil": 20295556663,
+    "domicilio": {
+      "_id": 14,
+      "calle": "Unamuno",
+      "numero": 888,
+      "localidad": "Lomas De Zamora",
+      "provincia": "GBA"
+    },
+    "obraSocial": {
+      "_id": 0,
+      "nombre": "OSDE",
+      "clientesAfiliados": [],
+      "empleadosAfiliados": []
+    }
+  },
+  "empleadoCobro": {
+    "nombre": "Diego",
+    "apellido": "Alvarez",
+    "dni": 29555666,
+    "cuil": 20295556663,
+    "domicilio": {
+      "_id": 14,
+      "calle": "Unamuno",
+      "numero": 888,
+      "localidad": "Lomas De Zamora",
+      "provincia": "GBA"
+    },
+    "obraSocial": {
+      "_id": 0,
+      "nombre": "OSDE",
+      "clientesAfiliados": [],
+      "empleadosAfiliados": []
+    }
+  }
+}
